@@ -1,0 +1,9 @@
+# Ignore Everything
+*
+
+# But not .cpp .md
+!*.cpp
+!*.md
+# Or directories
+!*/
+!.gitignore
