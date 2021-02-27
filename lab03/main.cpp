@@ -38,16 +38,16 @@ void readBMP()
     // which have range from 0 to 255 and read texture to array
     const size_t BYTE = sizeof(unsigned char);
 
-    FILE* bmp_file = fopen("minecraft.bmp", "rb");
+    FILE* bmp_file = fopen("lena_small.bmp", "rb");
     GLubyte bmp_header[54];
     if (fread(bmp_header, BYTE, 54, bmp_file) != 54)
     {
         fclose(bmp_file);
         return;
     }
-    // BGR -> RGB
+    // BGR -> RGB, row indexes are inversed
     int i, j;
-    for (i = 0; i < textureImageHeight; i++)
+    for (i = textureImageHeight-1; i >= 0; i--)
         for (j = 0; j < textureImageWidth; j++)
         {
             fread(&textureImage[i][j][2], BYTE, 1, bmp_file);
