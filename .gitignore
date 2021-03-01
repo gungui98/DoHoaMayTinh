@@ -3,6 +3,7 @@
 
 # But not .cpp .md
 !*.cpp
+!*.bmp
 !*.md
 # Or directories
 !*/
