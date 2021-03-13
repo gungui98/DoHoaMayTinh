@@ -21,6 +21,7 @@ class Point
 public:
     float x;
     float y;
+    Point(float x = 0.0, float y = 0.0): x(x), y(y) {}
 };
 //Chuyen dong thu nhat cua nguoi
 Point person[11] = { {10,300},//Dau
@@ -51,7 +52,12 @@ void drawLine(Point a, Point b)
 //Point a la Eo, Point b la dau goi, Point c la ban chan, angle la goc quay, temp la he so quay
 void rotate(float angle, float temp, Point a, Point& b, Point& c)
 {
+    double rad = angle * PI / 180.0;
+    b = Point((b.x - a.x) * cos(rad) - (b.y - a.y) * sin(rad) + a.x,
+              (b.x - a.x) * sin(rad) + (b.y - a.y) * cos(rad) + a.y);
     // recalculate coordinate of b and c based on angle and temp.
+    c = Point((c.x - a.x) * cos(temp * rad) - (c.y - a.y) * sin(temp * rad) + a.x,
+              (c.x - a.x) * sin(temp * rad) + (c.y - a.y) * cos(temp * rad) + a.y);
 
 }
 //==============================================================================
