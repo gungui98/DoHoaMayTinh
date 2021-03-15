@@ -8,6 +8,7 @@ using namespace std;
 float field_of_view = 35;
 float rotate_degree = 0;
 float rotation_speed = 0;
+double zoom_x{1.0}, zoom_y{1.0}, zoom_z{1.0};
 void perspectiveGL( GLdouble fovY, GLdouble aspect, GLdouble zNear, GLdouble zFar )
 {
     const GLdouble pi = 3.1415926535897932384626433832795;
@@ -71,6 +72,7 @@ void display(){
     glTranslatef(0.0,0.0,0.0);
     glRotatef(rotate_degree,0,1,0);
     rotate_degree += rotation_speed;
+    glScaled(zoom_x, zoom_y, zoom_z);
 
     glPushMatrix();
     glutSolidTeapot(1);
@@ -90,8 +92,47 @@ void mouse_function(int key, int state, int x, int y){
 }
 
 void keyboard(unsigned char key, int x, int y){
-    cout << key;
+    cout << key << endl;
     // zoom in zoom out by press keyboard
+    switch (key)
+    {
+    case 'a':
+        zoom_x *= 1.25;
+        zoom_y *= 1.25;
+        zoom_z *= 1.25;
+        break;
+    case 'b':
+        zoom_x *= 0.8;
+        zoom_y *= 0.8;
+        zoom_z *= 0.8;
+        break;
+    case 'q':
+        /* code */
+        zoom_x *= 1.25;
+        break;
+    case 'w':
+        /* code */
+        zoom_x *= 0.8;
+        break;
+    case 'e':
+        /* code */
+        zoom_y *= 1.25;
+        break;
+    case 'r':
+        /* code */
+        zoom_y *= 0.8;
+        break;
+    case 'd':
+        /* code */
+        zoom_z *= 1.25;
+        break;
+    case 'f':
+        /* code */
+        zoom_z *= 0.8;
+        break;
+    default:
+        break;
+    }
 }
 
 int main(int argc, char* args[]){

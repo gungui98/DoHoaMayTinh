@@ -1,8 +1,9 @@
-#include <windows.h>
-// #include <unistd.h>
+// #include <windows.h>
+#include <unistd.h>
 #include <GL/glut.h>
 #include <GL/gl.h>
 #include <GL/glu.h>
+#include <math.h>
 
 #define MAX_N 1004
 
@@ -50,7 +51,7 @@ void initShape() {
 }
 
 float tweening(float a, float b, float t) {
-	return (1 - t) * a + t * b;
+	return a * pow(b/a, t);
 	/// t from 0 to 1.
 	// implement tweening function with different 
 	// interpolation function ( sinusoidal, quadraic, exponential) .	
@@ -73,7 +74,7 @@ void display(void) {
 		drawTweening(A, B, numberOfVertexes, t);
 		glutSwapBuffers();
 		if (t >= 1.0 || t < 0.0) deltaT = -deltaT;
-		Sleep(20);
+		usleep(20);
 	}
 }
 

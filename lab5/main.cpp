@@ -3,9 +3,8 @@
 #include <windows.h>
 #endif
 
-#include <gl/gl.h>
-#include <gl/glu.h>
-#include <GL/GLU.h>
+#include <GL/gl.h>
+#include <GL/glu.h>
 #include <GL/freeglut.h>
 #include <cmath>
 
@@ -21,6 +20,10 @@ class Point
 public:
     float x;
     float y;
+    Point(float _x = 0.0, float _y = 0.0) {
+        x = _x;
+        y = _y;
+    }
 };
 //Chuyen dong thu nhat cua nguoi
 Point person[11] = { {10,300},//Dau
@@ -52,7 +55,19 @@ void drawLine(Point a, Point b)
 void rotate(float angle, float temp, Point a, Point& b, Point& c)
 {
     // recalculate coordinate of b and c based on angle and temp.
+    
+    float radius = angle * PI / 180;
+    
+    float c_radius = temp * radius;
 
+    float b_x = (b.x - a.x) * cos(radius) - (b.y - a.y) * sin(radius) + a.x;
+    float b_y = (b.x - a.x) * sin(radius) + (b.y - a.y) * cos(radius) + a.y;
+
+    float c_x = (c.x - a.x) * cos(c_radius) - (c.y - a.y) * sin(c_radius) + a.x;
+    float c_y = (c.x - a.x) * sin(c_radius) + (c.y - a.y) * cos(c_radius) + a.y;
+
+    b = Point(b_x, b_y);
+    c = Point(c_x, c_y);
 }
 //==============================================================================
 void myInit(void) {
