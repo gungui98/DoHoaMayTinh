@@ -1,0 +1,1 @@
+-ID:/uet/202/graphics/p1-rasterizer-sp21-master/src/dirent -ID:/uet/202/graphics/p1-rasterizer-sp21-master/CGL/include -ID:/uet/202/graphics/p1-rasterizer-sp21-master/CGL/include/CGL -IC:/msys64/mingw64/include/freetype2 -ID:/uet/202/graphics/p1-rasterizer-sp21-master/CGL/deps/glew/include -ID:/uet/202/graphics/p1-rasterizer-sp21-master/CGL/deps/glfw/include 

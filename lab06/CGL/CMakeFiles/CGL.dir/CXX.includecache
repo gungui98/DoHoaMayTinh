@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/uet/202/graphics/p1-rasterizer-sp21-master/CGL/src/path.cpp
+string
+-
+cstdlib
+-
+Windows.h
+-
+
