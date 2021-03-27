@@ -7,6 +7,24 @@ float progress(float curr, float start, float end) {
     return abs(curr - start) / abs(end - start);
 }
 
+float sign(float x0, float y0, float x1, float y1, float x2, float y2) {
+    return (x0 - x2) * (y1 - y2) - (x1 - x2) * (y0 - y2);
+}
+
+bool isInTriangle (float xpt, float ypt, float x0, float y0, float x1, float y1, float x2, float y2)
+{
+    float d0, d1, d2;
+    bool has_neg, has_pos;
+
+    d0 = sign(xpt, ypt, x0, y0, x1, y1);
+    d1 = sign(xpt, ypt, x1, y1, x2, y2);
+    d2 = sign(xpt, ypt, x2, y2, x0, y0);
+
+    has_neg = (d0 <= 0) || (d1 <= 0) || (d2 <= 0);
+    has_pos = (d0 >= 0) || (d1 >= 0) || (d2 >= 0);
+    return !(has_neg && has_pos);
+}
+
 namespace CGL {
 
     RasterizerImp::RasterizerImp(PixelSampleMethod psm, LevelSampleMethod lsm,
@@ -22,14 +40,18 @@ namespace CGL {
     }
 
     // Used by rasterize_point and rasterize_line
-    void RasterizerImp::fill_pixel(size_t x, size_t y, Color c) {
+    void RasterizerImp::fill_pixel(size_t x, size_t y, size_t dx, size_t dy, Color c) {
         // TODO: Task 2: You might need to this function to fix points and lines (such as the black rectangle border in test4.svg)
         // NOTE: You are not required to implement proper supersampling for points and lines
         // It is sufficient to use the same color for all supersamples of a pixel for points and lines (not triangles)
+        size_t sqrt_rate = sqrt(sample_rate);
+        size_t start_point = (width * height) * (dx * sqrt_rate + dy);
 
-
-        sample_buffer[y * width + x] = c;
+        sample_buffer[start_point + y * width + x] = c;
     }
+
+
+
 
     // Rasterize a point: simple example to help you start familiarizing
     // yourself with the starter code.
@@ -42,9 +64,13 @@ namespace CGL {
         // check bounds
         if (sx < 0 || sx >= width) return;
         if (sy < 0 || sy >= height) return;
+        size_t sqrt_rate = sqrt(sample_rate);
+        for (size_t dx = 0; dx < sqrt_rate; dx++) {
+            for (size_t dy = 0; dy < sqrt_rate; dy++) {
+                fill_pixel(sx, sy, dx, dy, color);
 
-        fill_pixel(sx, sy, color);
-        return;
+            }
+        }
     }
 
     // Rasterize a line.
@@ -71,73 +97,31 @@ namespace CGL {
             pt[1] += dpt[1];
         }
     }
-    void RasterizerImp::get_rasterize_line_attributes(float x0, float y0, float x1, float y1, float dpt[2]) {
-        float m = (y1 - y0) / (x1 - x0);
-        float pt[] = {x0, y0};
-        dpt[0] = 1;
-        dpt[1] = m;
-        int steep = abs(m) > 1;
-        if (steep) {
-            dpt[0] = x1 == x0 ? 0 : 1 / abs(m);
-            dpt[1] = x1 == x0 ? (y1 - y0) / abs(y1 - y0) : m / abs(m);
-        }
-    }
     // Rasterize a triangle.
     void RasterizerImp::rasterize_triangle(float x0, float y0,
                                            float x1, float y1,
                                            float x2, float y2,
                                            Color color) {
-        //printf("DRAW TRIANGLE x0 = %f y0 = %f x1 = %f y1 = %f x2 = %f y2 = %f\n", x0, y0, x1, y1, x2, y2);
-        if (x0 > x1) {
-            swap(x0, x1);
-            swap(y0, y1);
-        }
-        if (x0 > x2) {
-            swap(x0, x2);
-            swap(y0, y2);
-        }
-        if (x1 > x2) {
-            swap(x1, x2);
-            swap(y1, y2);
-        }
         // TODO: Task 1: Implement basic triangle rasterization here, no supersampling
-        float points[][2] = {{x0, y0}, {x1, y1}, {x2, y2}};
-
-        for (int i = 0; i < 3; i++) {
-            int i_next = (i + 1) % 3;
-            RasterizerImp::rasterize_line(points[i][0], points[i][1], points[i_next][0], points[i_next][1], color);
-        }
-
-        float pt1[] = {points[0][0], points[0][1]};
-        float dpt1[2];
-        int dim1 = (points[1][0] == points[0][0]) ? 1 : 0;
-        get_rasterize_line_attributes(points[0][0], points[0][1], points[1][0], points[1][1], dpt1);
-
-        float pt2[] = {points[0][0], points[0][1]};
-        float dpt2[2];
-        int dim2 = (points[2][0] == points[0][0]) ? 1 : 0;
-        get_rasterize_line_attributes(points[0][0], points[0][1], points[2][0], points[2][1], dpt2);
-
-
-        while (true) {
-            float progress1 = progress(pt1[dim1], points[0][dim1], points[1][dim1]);
-            float progress2 = progress(pt2[dim2], points[0][dim2], points[2][dim2]);
-            if (progress1 + eps >= 1 &&
-                progress2 + eps >= 1) {
-                break;
-            }
-            if (progress1 < progress2) {
-                pt1[0] += dpt1[0];
-                pt1[1] += dpt1[1];
-                RasterizerImp::rasterize_line(pt1[0], pt1[1], points[2][0], points[2][1], color);
-            } else {
-                pt2[0] += dpt2[0];
-                pt2[1] += dpt2[1];
-                RasterizerImp::rasterize_line(pt2[0], pt2[1], points[1][0], points[1][1], color);
-            }
-            RasterizerImp::rasterize_line(pt1[0], pt1[1], pt2[0], pt2[1], color);
-        }
+        float xmin = min(x0, min(x1, x2));
+        float ymin = min(y0, min(y1, y2));
+        float xmax = max(x0, max(x1, x2));
+        float ymax = max(y0, max(y1, y2));
         // TODO: Task 2: Update to implement super-sampled rasterization
+        for (float x = floor(xmin); floor(x) <= xmax; x += 1.0f) {
+            for (float y = floor(ymin); floor(y) <= ymax; y += 1.0f) {
+                int sqrt_rate = sqrt(sample_rate);
+                float sample_size = 1.0f / float(sqrt_rate);
+                int number_in_triangle = 0;
+                for (int dx = 0; dx < sqrt_rate; dx++) {
+                    for (int dy = 0; dy < sqrt_rate; dy++) {
+                        if (isInTriangle(x + (dx + 0.5f) * sample_size, y +(dy + 0.5) * sample_size, x0, y0, x1, y1, x2, y2)) {
+                            RasterizerImp::fill_pixel(x, y, dx, dy, color);
+                        }
+                    }
+                }
+            }
+        }
 
 
 
@@ -176,7 +160,7 @@ namespace CGL {
         this->sample_rate = rate;
 
 
-        this->sample_buffer.resize(width * height, Color::White);
+        this->sample_buffer.resize(width * height * rate, Color::White);
     }
 
 
@@ -190,7 +174,7 @@ namespace CGL {
         this->rgb_framebuffer_target = rgb_framebuffer;
 
 
-        this->sample_buffer.resize(width * height, Color::White);
+        this->sample_buffer.resize(width * height * sample_rate, Color::White);
     }
 
 
@@ -207,19 +191,25 @@ namespace CGL {
     //
     void RasterizerImp::resolve_to_framebuffer() {
         // TODO: Task 2: You will likely want to update this function for supersampling support
-
-
         for (int x = 0; x < width; ++x) {
             for (int y = 0; y < height; ++y) {
-                Color col = sample_buffer[y * width + x];
+                Color totalCol = Color(0, 0, 0);
+                size_t sqrt_rate = sqrt(sample_rate);
+                for (int dx = 0; dx < sqrt_rate; ++dx) {
+                    for (int dy = 0; dy < sqrt_rate; ++dy) {
+                        size_t start_point = (width * height) * (dx * sqrt_rate + dy);
 
+                        totalCol += sample_buffer[start_point + y * width + x];
+                    }
+                }
+                totalCol *= 1.0f / sample_rate;
                 for (int k = 0; k < 3; ++k) {
-                    this->rgb_framebuffer_target[3 * (y * width + x) + k] = (&col.r)[k] * 255;
+                    this->rgb_framebuffer_target[3 * (y * width + x) + k] = (&totalCol.r)[k] * 255;
                 }
             }
         }
-
     }
+
 
     Rasterizer::~Rasterizer() { }
 

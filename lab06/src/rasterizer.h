@@ -78,13 +78,11 @@ namespace CGL {
     // For example, Position [x,y] = [width * y + x]
     // The number of elements in buffer = width * height * sample_rate
     std::vector<Color> sample_buffer;
-
   public:
 
     RasterizerImp(PixelSampleMethod psm, LevelSampleMethod lsm,
       size_t width, size_t height, unsigned int sample_rate);
 
-    void get_rasterize_line_attributes(float x0, float y0, float x1, float y1, float dpt[2]);
     // Rasterize a point
     // P0 = (x, y)
     void rasterize_point(float x, float y, Color color);
@@ -122,8 +120,7 @@ namespace CGL {
     void set_lsm(LevelSampleMethod l) { lsm = l; }
 
     // Fill a pixel, which may contain multiple samples
-    void fill_pixel(size_t x, size_t y, Color c);
-
+    void fill_pixel(size_t x, size_t y, size_t dx, size_t dy, Color c);
     // This function sets the framebuffer target.  The block of memory
     // for the framebuffer contains 3 * width * height values for an RGB
     // pixel framebuffer with 8-bits per color channel.
