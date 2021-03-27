@@ -128,7 +128,7 @@ namespace CGL {
     this->sample_rate = rate;
 
 
-    this->sample_buffer.resize(width * height * rate, Color::White);
+    this->sample_buffer.resize(width * height * sample_rate, Color::White);
   }
 
 
@@ -158,18 +158,18 @@ namespace CGL {
   // pixels from the supersample buffer data.
   //
   void RasterizerImp::resolve_to_framebuffer() {
-    // TODO: Task 2: You will likely want to update this function for supersampling support
+    // Task 2: You will likely want to update this function for supersampling support
 
 
-    size_t sqrt_rate = sqrt(sample_rate);
+    int sqrt_rate = sqrt(sample_rate);
     for (int x = 0; x < width; ++x) {
       for (int y = 0; y < height; ++y) {
         Color col(0,0,0);
-        for (size_t dx = 0; dx < sqrt_rate; dx++)
-          for (size_t dy = 0; dy < sqrt_rate; dy++) {
+        for (int dx = 0; dx < sqrt_rate; dx++)
+          for (int dy = 0; dy < sqrt_rate; dy++) {
             col += sample_buffer[((dx * sqrt_rate + dy) * height + y) * width + x];
           }
-        col *= 1.f / sample_rate;
+        col *= 1.0f / sample_rate;
         for (int k = 0; k < 3; ++k) {
           this->rgb_framebuffer_target[3 * (y * width + x) + k] = (&col.r)[k] * 255;
         }
