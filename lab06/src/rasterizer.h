@@ -122,7 +122,7 @@ namespace CGL {
     void set_lsm(LevelSampleMethod l) { lsm = l; }
 
     // Fill a pixel, which may contain multiple samples
-    void fill_pixel(size_t x, size_t y, Color c);
+    void fill_pixel(size_t x, size_t y, Color c, size_t dx=0, size_t dy=0);
 
     // This function sets the framebuffer target.  The block of memory
     // for the framebuffer contains 3 * width * height values for an RGB
