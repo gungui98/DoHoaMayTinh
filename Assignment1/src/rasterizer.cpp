@@ -11,6 +11,10 @@ float sign(float x0, float y0, float x1, float y1, float x2, float y2) {
     return (x0 - x2) * (y1 - y2) - (x1 - x2) * (y0 - y2);
 }
 
+float L(float x, float y, float xP, float yP, float xQ, float yQ) {
+    return -(x - xP) * (yQ - yP) + (y - yP) * (xQ - xP);
+}
+
 bool isInTriangle (float xpt, float ypt, float x0, float y0, float x1, float y1, float x2, float y2)
 {
     float d0, d1, d2;
@@ -134,9 +138,31 @@ namespace CGL {
     {
         // TODO: Task 4: Rasterize the triangle, calculating barycentric coordinates and using them to interpolate vertex colors across the triangle
         // Hint: You can reuse code from rasterize_triangle
-
-
-
+        float xmin = min(x0, min(x1, x2));
+        float ymin = min(y0, min(y1, y2));
+        float xmax = max(x0, max(x1, x2));
+        float ymax = max(y0, max(y1, y2));
+        // TODO: Task 2: Update to implement super-sampled rasterization
+        for (float x = floor(xmin); floor(x) <= xmax + 1.0f; x += 1.0f) {
+            for (float y = floor(ymin); floor(y) <= ymax + 1.0f; y += 1.0f) {
+                int sqrt_rate = sqrt(sample_rate);
+                float sample_size = 1.0f / float(sqrt_rate);
+                int number_in_triangle = 0;
+                for (int dx = 0; dx < sqrt_rate; dx++) {
+                    for (int dy = 0; dy < sqrt_rate; dy++) {
+                        if (isInTriangle(x + (dx + 0.5f) * sample_size, y + (dy + 0.5) * sample_size, x0, y0, x1, y1, x2, y2)) {
+                            float X = x + dx + 0.5;
+                            float Y = y + dy + 0.5;
+                            float alpha = L(X, Y, x1, y1, x2, y2) / L(x0, y0, x1, y1, x2, y2);
+                            float beta = L(X, Y, x0, y0, x2, y2) / L(x1, y1, x0, y0, x2, y2);
+                            float gamma = 1 - alpha - beta;
+                            Color color = alpha * c0 + beta * c1 + gamma * c2;
+                            RasterizerImp::fill_pixel(x, y, dx, dy, color);
+                        }
+                    }
+                }
+            }
+        }
     }
 
 
