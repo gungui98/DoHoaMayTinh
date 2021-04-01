@@ -1,12 +1,6 @@
 # Project 1: Rasterizer
 Results:
 
-Basic 1
-![Alt text](basic1.jpg?raw=true "Title")
-
-Basic 2
-![Alt text](basic2.jpg?raw=true "Title")
-
 Basic 3
 ![Alt text](basic3.jpg?raw=true "Title")
 
@@ -19,8 +13,8 @@ Basic5
 Basic6
 ![Alt text](basic6.jpg?raw=true "Title")
 
-Hardcore1
-![Alt text](hardcore1.jpg?raw=true "Title")
+Basic7
+![Alt text](basic7.jpg?raw=true "Title")
 
-Hardcore2
-![Alt text](hardcore2.jpg?raw=true "Title")
+Robot
+![Alt text](robot.jpg?raw=true "Title")
