@@ -66,6 +66,16 @@ namespace CGL {
     }
   }
 
+  bool is_in_triangle(float x, float y,
+    float x0, float y0,
+    float x1, float y1,
+    float x2, float y2) {
+    float l0 = (x-x0)*(y1-y0) - (y-y0)*(x1-x0);
+    float l1 = (x-x1)*(y2-y1) - (y-y1)*(x2-x1);
+    float l2 = (x-x2)*(y0-y2) - (y-y2)*(x0-x2);
+    return (l0 >= 0 && l1 >= 0 && l2 >= 0) || (l0 <= 0 && l1 <= 0 && l2 <= 0);
+  }
+
   // Rasterize a triangle.
   void RasterizerImp::rasterize_triangle(float x0, float y0,
     float x1, float y1,
@@ -75,19 +85,14 @@ namespace CGL {
     float xmin = floor(fmin(x0, fmin(x1, x2))), xmax = floor(fmax(x0, fmax(x1, x2)));
     float ymin = floor(fmin(y0, fmin(y1, y2))), ymax = floor(fmax(y0, fmax(y1, y2)));
     // Task 2: Update to implement super-sampled rasterization
-    float x, y, x_, y_, l0, l1, l2;
+    float x, y;
     size_t sqrt_rate = sqrt(sample_rate);
     float sample_size = 1.0f / sqrt_rate;
     for (x = xmin; floor(x) <= xmax; x += 1.0f) {
       for (y = ymin; floor(y) <= ymax; y += 1.0f) {
         for (size_t dx = 0; dx < sqrt_rate; dx++)
           for (size_t dy = 0; dy < sqrt_rate; dy++) {
-            x_ = x + (dx+.5f)*sample_size;
-            y_ = y + (dy+.5f)*sample_size;
-            l0 = (x_-x0)*(y1-y0) - (y_-y0)*(x1-x0);
-            l1 = (x_-x1)*(y2-y1) - (y_-y1)*(x2-x1);
-            l2 = (x_-x2)*(y0-y2) - (y_-y2)*(x0-x2);
-            if ((l0 >= 0 && l1 >= 0 && l2 >= 0) || (l0 <= 0 && l1 <= 0 && l2 <= 0)) {
+            if (is_in_triangle(x + (dx+.5f)*sample_size, y + (dy+.5f)*sample_size, x0, y0, x1, y1, x2, y2)) {
               fill_pixel(x, y, color, dx, dy);
             }
           }
@@ -100,11 +105,28 @@ namespace CGL {
     float x1, float y1, Color c1,
     float x2, float y2, Color c2)
   {
-    // TODO: Task 4: Rasterize the triangle, calculating barycentric coordinates and using them to interpolate vertex colors across the triangle
-    // Hint: You can reuse code from rasterize_triangle
-
-
-
+    // Task 4: Rasterize the triangle, calculating barycentric coordinates and using them to interpolate vertex colors across the triangle
+    float xmin = floor(fmin(x0, fmin(x1, x2))), xmax = floor(fmax(x0, fmax(x1, x2)));
+    float ymin = floor(fmin(y0, fmin(y1, y2))), ymax = floor(fmax(y0, fmax(y1, y2)));
+    float x, y, alpha, beta, gamma;
+    size_t sqrt_rate = sqrt(sample_rate);
+    float sample_size = 1.0f / sqrt_rate;
+    for (x = xmin; floor(x) <= xmax; x += 1.0f)
+      for (y = ymin; floor(y) <= ymax; y += 1.0f)
+        for (size_t dx = 0; dx < sqrt_rate; dx++)
+          for (size_t dy = 0; dy < sqrt_rate; dy++)
+            if (is_in_triangle(x + (dx+.5f)*sample_size, y + (dy+.5f)*sample_size, x0, y0, x1, y1, x2, y2)) {
+              // (x, y) = alpha*(x0, y0) + beta*(x1, y1) + gamma*(x2, y2)
+              alpha = ((y-y1)*(x2-x1) - (x-x1)*(y2-y1)) / ((y0-y1)*(x2-x1) - (y2-y1)*(x0-x1));
+              beta = ((y-y2)*(x0-x2) - (x-x2)*(y0-y2)) / ((y1-y2)*(x0-x2) - (y0-y2)*(x1-x2));
+              gamma = 1.f - alpha - beta;
+              Color color(
+                alpha*c0.r + beta*c1.r + gamma*c2.r,
+                alpha*c0.g + beta*c1.g + gamma*c2.g,
+                alpha*c0.b + beta*c1.b + gamma*c2.b
+              );
+              fill_pixel(x, y, color);
+            }
   }
 
 

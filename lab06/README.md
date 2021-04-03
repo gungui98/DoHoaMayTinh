@@ -32,3 +32,6 @@
 
 ![basic6](output/task1/basic6.png) 
 
+- basic7:
+
+![basic7](output/task1/basic7.png) 
