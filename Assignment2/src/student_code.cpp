@@ -34,6 +34,12 @@ namespace CGL
   std::vector<Vector3D> BezierPatch::evaluateStep(std::vector<Vector3D> const &points, double t) const
   {
     // TODO Part 2.
+    std::vector<Vector3D> ret;
+    for (int i = 0; i + 1 < points.size(); i++) {
+      ret.push_back((1 - t) * points[i] + t * points[i + 1]);
+    }
+    return ret;
+
     return std::vector<Vector3D>();
   }
 
@@ -46,8 +52,20 @@ namespace CGL
    */
   Vector3D BezierPatch::evaluate1D(std::vector<Vector3D> const &points, double t) const
   {
-    // TODO Part 2.
-    return Vector3D();
+    std::vector<Vector3D> points1;
+    for (auto p : points) {
+      points1.push_back(p);
+    }
+    std::vector<Vector3D> points2;
+    while (points1.size() >= 2) {
+      points2 = evaluateStep(points1, t);
+      points1.clear();
+      for (auto p : points2) {
+        points1.push_back(p);
+      }
+      points2.clear();
+    }
+    return points1[0];
   }
 
   /**
@@ -58,9 +76,20 @@ namespace CGL
    * @return Final interpolated vector
    */
   Vector3D BezierPatch::evaluate(double u, double v) const 
-  {  
-    // TODO Part 2.
-    return Vector3D();
+  {
+    //printf("evaluate\n");
+    int edge = controlPoints.size();
+    //printf("edge = %d", edge);
+    vector<Vector3D> interpolated_vectors;
+    for (int i = 0; i < edge; i++) {
+      vector<Vector3D> p; 
+      for (int j = 0; j < edge; j++) {
+        p.push_back(controlPoints[i][j]);
+      }
+      interpolated_vectors.push_back(evaluate1D(p, u));
+    }
+    //printf("ok\n");
+    return evaluate1D(interpolated_vectors, v);
   }
 
   Vector3D Vertex::normal( void ) const
