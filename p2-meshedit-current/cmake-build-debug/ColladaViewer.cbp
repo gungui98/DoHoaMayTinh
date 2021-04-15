@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ColladaViewer"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\CGL\;CMake Files\CGL\deps\;CMake Files\CGL\deps\glew\;CMake Files\CGL\deps\glfw\;CMake Files\CGL\deps\glfw\src\;CMake Files\CGL\src\;CMake Files\src\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glew">
+				<Option output="D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glew/libglew.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glew"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glew/include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/x86_64-w64-mingw32"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include-fixed"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glew/Makefile&quot;  VERBOSE=1 glew"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glew/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glew/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glew/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glew/fast">
+				<Option output="D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glew/libglew.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glew"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glew/include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/x86_64-w64-mingw32"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include-fixed"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glew/Makefile&quot;  VERBOSE=1 glew/fast"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glew/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glew/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glew/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="uninstall">
+				<Option working_dir="D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glfw"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glfw/Makefile&quot;  VERBOSE=1 uninstall"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glfw/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glfw/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glfw/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glfw">
+				<Option output="D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glfw/src/libglfw3.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glfw/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLEW_STATIC"/>
+					<Add option="-DUNICODE"/>
+					<Add option="-DWINVER=0x0501"/>
+					<Add option="-D_GLFW_USE_CONFIG_H"/>
+					<Add directory="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glfw/src"/>
+					<Add directory="D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glfw/src"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/x86_64-w64-mingw32"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include-fixed"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glfw/src/Makefile&quot;  VERBOSE=1 glfw"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glfw/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glfw/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glfw/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glfw/fast">
+				<Option output="D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glfw/src/libglfw3.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glfw/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLEW_STATIC"/>
+					<Add option="-DUNICODE"/>
+					<Add option="-DWINVER=0x0501"/>
+					<Add option="-D_GLFW_USE_CONFIG_H"/>
+					<Add directory="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glfw/src"/>
+					<Add directory="D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glfw/src"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/x86_64-w64-mingw32"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include-fixed"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glfw/src/Makefile&quot;  VERBOSE=1 glfw/fast"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glfw/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glfw/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glfw/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CGL">
+				<Option output="D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/src/libCGL.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="D:/uet/202/graphics/p2-meshedit-current-master/CGL/include"/>
+					<Add directory="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glew/include"/>
+					<Add directory="C:/msys64/mingw64/include/freetype2"/>
+					<Add directory="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/x86_64-w64-mingw32"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include-fixed"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/src/Makefile&quot;  VERBOSE=1 CGL"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CGL/fast">
+				<Option output="D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/src/libCGL.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DGLEW_STATIC"/>
+					<Add directory="D:/uet/202/graphics/p2-meshedit-current-master/CGL/include"/>
+					<Add directory="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glew/include"/>
+					<Add directory="C:/msys64/mingw64/include/freetype2"/>
+					<Add directory="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/x86_64-w64-mingw32"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include-fixed"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/src/Makefile&quot;  VERBOSE=1 CGL/fast"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="meshedit">
+				<Option output="D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/meshedit.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir=".."/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/uet/202/graphics/p2-meshedit-current-master/CGL/include"/>
+					<Add directory="C:/msys64/mingw64/include/freetype2"/>
+					<Add directory="D:/uet/202/graphics/p2-meshedit-current-master/src/dirent"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/x86_64-w64-mingw32"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include-fixed"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 meshedit"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="meshedit/fast">
+				<Option output="D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/meshedit.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir=".."/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/uet/202/graphics/p2-meshedit-current-master/CGL/include"/>
+					<Add directory="C:/msys64/mingw64/include/freetype2"/>
+					<Add directory="D:/uet/202/graphics/p2-meshedit-current-master/src/dirent"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/x86_64-w64-mingw32"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/include-fixed"/>
+					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 meshedit/fast"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glew/src/glew.c">
+			<Option target="glew"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glew/src/glewinfo.c">
+			<Option target="glew"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glew/src/visualinfo.c">
+			<Option target="glew"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glfw/include/GLFW/glfw3.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glfw/include/GLFW/glfw3native.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glfw/src/context.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glfw/src/init.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glfw/src/input.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glfw/src/internal.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glfw/src/monitor.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glfw/src/wgl_context.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glfw/src/wgl_context.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glfw/src/win32_init.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glfw/src/win32_monitor.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glfw/src/win32_platform.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glfw/src/win32_time.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glfw/src/win32_tls.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glfw/src/win32_tls.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glfw/src/win32_window.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glfw/src/window.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glfw/src/winmm_joystick.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glfw/src/winmm_joystick.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/CGL.h">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/base64.cpp">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/base64.h">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/color.cpp">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/color.h">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/complex.cpp">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/complex.h">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/matrix3x3.cpp">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/matrix3x3.h">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/matrix4x4.cpp">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/matrix4x4.h">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/osdfont.cpp">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/osdtext.cpp">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/osdtext.h">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/quaternion.cpp">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/quaternion.h">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/renderer.h">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/tinyxml2.cpp">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/tinyxml2.h">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/vector2D.cpp">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/vector2D.h">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/vector3D.cpp">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/vector3D.h">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/vector4D.cpp">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/vector4D.h">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/viewer.cpp">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/viewer.h">
+			<Option target="CGL"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/cmake-build-debug/CGL/deps/glfw/src/glfw_config.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/bezierCurve.cpp">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/bezierCurve.h">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/bezierPatch.cpp">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/bezierPatch.h">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/camera.cpp">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/camera.h">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/collada.cpp">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/collada.h">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/halfEdgeMesh.cpp">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/halfEdgeMesh.h">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/light.cpp">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/light.h">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/main.cpp">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/material.cpp">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/material.h">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/mergeVertices.h">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/mesh.cpp">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/mesh.h">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/meshEdit.cpp">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/meshEdit.h">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/png.cpp">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/png.h">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/scene.cpp">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/scene.h">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/shaderUtils.h">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/student_code.cpp">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/student_code.h">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/texture.cpp">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/texture.h">
+			<Option target="meshedit"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\CGL\"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glew/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\CGL\deps\glew\"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glfw/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\CGL\deps\glfw\"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glfw/cmake_uninstall.cmake.in">
+			<Option virtualFolder="CMake Files\CGL\deps\glfw\"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glfw/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\CGL\deps\glfw\src\"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glfw/src/glfw3.pc.in">
+			<Option virtualFolder="CMake Files\CGL\deps\glfw\src\"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glfw/src/glfw3Config.cmake.in">
+			<Option virtualFolder="CMake Files\CGL\deps\glfw\src\"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/deps/glfw/src/glfw_config.h.in">
+			<Option virtualFolder="CMake Files\CGL\deps\glfw\src\"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/CGL/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\CGL\src\"/>
+		</Unit>
+		<Unit filename="D:/uet/202/graphics/p2-meshedit-current-master/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
