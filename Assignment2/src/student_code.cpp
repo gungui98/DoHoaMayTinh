@@ -77,9 +77,7 @@ namespace CGL
    */
   Vector3D BezierPatch::evaluate(double u, double v) const 
   {
-    //printf("evaluate\n");
     int edge = controlPoints.size();
-    //printf("edge = %d", edge);
     vector<Vector3D> interpolated_vectors;
     for (int i = 0; i < edge; i++) {
       vector<Vector3D> p; 
@@ -88,7 +86,6 @@ namespace CGL
       }
       interpolated_vectors.push_back(evaluate1D(p, u));
     }
-    //printf("ok\n");
     return evaluate1D(interpolated_vectors, v);
   }
 

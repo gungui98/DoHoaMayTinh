@@ -1,3 +1,7 @@
 # Assignment 2: MeshEdit
 
-You can view the spec for this project at [Assignment 2: MeshEdit](https://cs184.eecs.berkeley.edu/sp21/docs/proj2).
+Part1
+![Alt text](Part1.png?raw=true "Title")
+
+Part2
+![Alt text](Part2.png?raw=true "Title")
