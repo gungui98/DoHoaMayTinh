@@ -1,4 +1,6 @@
 #include <windows.h>
+#include <cmath>
+#include <cstdio>
 // #include <unistd.h>
 #include <GL/glut.h>
 #include <GL/gl.h>
@@ -28,7 +30,7 @@ void initShape() {
 		A[i] = new float[2];
 		B[i] = new float[2];
 	}
-	// Than ngoi nha	
+	// Than ngoi nha
 	A[0][0] = 600.0; A[0][1] = 300.0;
 	A[1][0] = 500.0; A[1][1] = 335.0;
 	A[2][0] = 310.0; A[2][1] = 400.0;
@@ -50,10 +52,14 @@ void initShape() {
 }
 
 float tweening(float a, float b, float t) {
-	return (1 - t) * a + t * b;
+    /// exponential function
+    //printf("%f %f\n", a * pow(b /a, t), (1 - t) * a + t * b);
+    return a * pow(b / a, t);
+	///linear
+	//return (1 - t) * a + t * b;
 	/// t from 0 to 1.
-	// implement tweening function with different 
-	// interpolation function ( sinusoidal, quadraic, exponential) .	
+	// implement tweening function with different
+	// interpolation function ( sinusoidal, quadraic, exponential) .
 }
 
 void drawTweening(float** A, float** B, int n, float t) {

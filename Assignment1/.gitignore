@@ -1,0 +1,15 @@
+.DS_Store
+build/
+src2/
+*~
+vstudio
+build
+.idea
+.vscode
+.vs
+out/
+cmake-build-debug
+xcode
+build-dbg/
+*.swp
+*.json

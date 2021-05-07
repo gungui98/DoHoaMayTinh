@@ -11,9 +11,9 @@
 
 
 void myInit( void )  {
-  glClearColor( 0.0, 0.0, 0.0, 0.0 );
-  glColor3f( 1.0, 1.0, 1.0 );
-  glPointSize( 3.0 );
+  glClearColor( 0.3, 0.1, 0.3, 0.3 );
+  glColor3f( 0.0, 1.0, 0.0 );
+  glPointSize( 1.0 );
   glMatrixMode( GL_PROJECTION );
   glLoadIdentity( );
   glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
@@ -23,22 +23,22 @@ void myInit( void )  {
 
 /* ----------------------------------------------------------------------- */
 void myDisplay( void )  {
-        glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT ); 
-        	     
+        glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
+
         glBegin(GL_POLYGON);
-        	//glColor3f(1.0f,0.0f,0.0f);		
+        	//glColor3f(1.0f,0.0f,0.0f);
             glVertex3f(0.25, 0.25, 0.0);
-	    	//glColor3f(0.0f,1.0f,0.0f);			
+	    	//glColor3f(0.0f,1.0f,0.0f);
             glVertex3f(0.75, 0.25, 0.0);
-	        //glColor3f(0.5f,0.5f,1.0f);				
+	        //glColor3f(0.5f,0.5f,1.0f);
             glVertex3f(0.75, 0.75, 0.0);
-		    //glColor3f(0.0f,0.0f,1.0f);			
+		    //glColor3f(0.0f,0.0f,1.0f);
             glVertex3f(0.25, 0.75, 0.0);
-      
+
         glEnd();
-		glFlush();			
+		glFlush();
   	    glutSwapBuffers();
-   
+
 }
 
 /* ----------------------------------------------------------------------- */
@@ -55,7 +55,7 @@ int main( int argc, char *argv[] )  {
   // Create the window.
   glutCreateWindow( "Vidu_01" );
   // Set the callback funcion to call when we need to draw something.
-  
+
 
   myInit( );
   glutDisplayFunc( myDisplay );

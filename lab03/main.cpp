@@ -36,6 +36,35 @@ void readBMP()
     // implement reading bitmap file into textureImage, note that all given bitmap have the same size 64x64
     // with first 54 bytes is header and the remain is pixel array encoded in 1 byte, you should use the unsigned char,
     // which have range from 0 to 255 and read texture to array
+    FILE* f = fopen("lena_small.bmp", "rb");
+
+    if (f == nullptr) {
+        printf("File does not exist");
+        return;
+    }
+
+    unsigned char info[54];
+
+    fread(info, sizeof(unsigned char), 54, f);
+
+    int data_size = 3 * textureImageWidth * textureImageHeight;
+
+    unsigned char* data = new unsigned char[data_size];
+
+    fread(data, sizeof(unsigned char), data_size, f);
+    fclose(f);
+    int x = 0, y = 0;
+    int i = 0;
+    for (int x = 0; x < textureImageHeight; x++) {
+        for (int y = 0; y < textureImageWidth; y++) {
+            textureImage[x][y][0] = data[i];
+            textureImage[x][y][1] = data[i + 1];
+            textureImage[x][y][2] = data[i + 2];
+            textureImage[x][y][3] = 255;
+            i += 3;
+        }
+    }
+
 }
 
 
@@ -66,6 +95,7 @@ void InitGL(int Width, int Height)	        // We call this right after our OpenG
 
 
     loadTexture();
+    readBMP();
     glGenTextures(1, &texName);
     glBindTexture(GL_TEXTURE_2D, texName);
 
